@@ -12,13 +12,12 @@
       --border-light: #F0F0F0;
       --card-bg: #FFFFFF;
 
-      /* 益生菌友好色彩 - 肠道微生物卡片边框色 */
+      /* 益生菌友好色彩 */
       --microbe-fiber: #90EE90;     /* 淡绿 - 膳食纤维 */
       --microbe-probiotic: #87CEEB; /* 淡蓝 - 益生菌 */
       --microbe-prebiotic: #DDA0DD; /* 淡紫 - 益生元 */
       --microbe-shortchain: #F0E68C; /* 淡黄 - 短链脂肪酸 */
 
-      /* 温和主色（用于标题等） */
       --primary-text-accent: #444444;
       --heading-color: #555555;
     }
@@ -135,6 +134,7 @@
     th {
       background: var(--section-bg);
       color: var(--heading-color);
+      font-weight: 600;
     }
 
     tr:hover {
@@ -169,6 +169,51 @@
     ul li {
       margin-bottom: 0.5rem;
     }
+
+    /* 新增益生菌表格样式 */
+    .probiotic-table {
+      font-size: 0.95rem;
+    }
+
+    .probiotic-table th {
+      background: var(--microbe-probiotic);
+      color: white;
+      position: sticky;
+      top: 0;
+    }
+
+    .probiotic-table tr:nth-child(even) {
+      background: #F8F9FF;
+    }
+
+    .probiotic-table tr:hover {
+      background: #F0F4FF;
+    }
+
+    .probiotic-name {
+      font-weight: 600;
+      color: #2c5aa0;
+    }
+
+    .chinese-name {
+      color: #666;
+      font-style: italic;
+    }
+
+    .application {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .scenario-tag {
+      display: inline-block;
+      background: #e3f2fd;
+      color: #1976d2;
+      padding: 0.1em 0.5em;
+      border-radius: 0.3em;
+      font-size: 0.8rem;
+      margin: 0.1em;
+    }
   </style>
 </head>
 <body>
@@ -197,21 +242,21 @@
       <div class="microbe-card probiotic">
         <h3>🦠 益生菌 (Probiotics)</h3>
         <p><strong>"肠道卫士"</strong> - 维护肠道微生态平衡</p>
-        <p><span class="highlight">与健康关系：</span> 乳酸菌、双歧杆菌等益生菌抑制有害菌，增强肠道屏障</p>
+        <p><span class="highlight">与健康关系：</span> 特定益生菌菌株可抑制有害菌，增强肠道屏障和免疫</p>
         <p><span class="highlight">健康益处：</span> 改善免疫力、缓解腹泻便秘、支持心理健康</p>
       </div>
 
       <div class="microbe-card prebiotic">
         <h3>🍄 益生元 (Prebiotics)</h3>
         <p><strong>"益生菌的肥料"</strong> - 选择性滋养有益菌群</p>
-        <p><span class="highlight">与健康关系：</span> 低聚糖、抗性淀粉等益生元促进益生菌生长繁殖</p>
+        <p><span class="highlight">与健康关系：</span> 低聚糖等益生元促进益生菌生长繁殖</p>
         <p><span class="highlight">健康益处：</span> 增强肠道功能、改善营养吸收、提升免疫力</p>
       </div>
 
       <div class="microbe-card shortchain">
         <h3>💨 短链脂肪酸 (Short-Chain Fatty Acids)</h3>
         <p><strong>"肠道能量源"</strong> - 益生菌代谢产生的重要物质</p>
-        <p><span class="highlight">与健康关系：</span> 丁酸、丙酸、乙酸等SCFAs为结肠细胞提供能量，调节免疫</p>
+        <p><span class="highlight">与健康关系：</span> 丁酸、丙酸、乙酸等为结肠细胞提供能量，调节免疫</p>
         <p><span class="highlight">健康益处：</span> 抗炎作用、调节食欲、保护肠道黏膜</p>
       </div>
     </section>
@@ -223,7 +268,13 @@
         <h3>经常便秘或腹泻</h3>
         <p><strong>相关微生物：</strong> <span class="tag">益生菌</span> <span class="tag">膳食纤维</span></p>
         <p><strong>机制：</strong> 肠道菌群失衡 → 消化功能紊乱 → 排便异常</p>
-        <p><strong>改善方案：</strong> 增加膳食纤维摄入，补充益生菌，保持规律作息</p>
+        <p><strong>改善方案：</strong> 增加膳食纤维摄入，同时补充以下明确益生菌菌株，有助于调节肠道功能：</p>
+        <ul>
+          <li><strong>Lactobacillus rhamnosus GG (LGG)</strong>：缓解腹泻，增强肠道屏障</li>
+          <li><strong>Bifidobacterium lactis BB-12®</strong>：改善便秘，促进消化</li>
+          <li><strong>Lactobacillus acidophilus</strong>：平衡肠道菌群</li>
+        </ul>
+        <p>推荐通过专业益生菌补充剂摄入，或选择标明含活性菌的食品。</p>
       </div>
 
       <div class="activity-card">
@@ -231,7 +282,11 @@
         <h3>经常感到腹胀不适</h3>
         <p><strong>相关微生物：</strong> <span class="tag">益生元</span> <span class="tag">短链脂肪酸</span></p>
         <p><strong>机制：</strong> 发酵过程异常 → 气体产生过多 → 腹胀感</p>
-        <p><strong>改善方案：</strong> 逐步增加益生元食物，促进有益菌发酵平衡</p>
+        <p><strong>改善方案：</strong> 逐步增加益生元食物，同时考虑以下益生菌菌株帮助平衡发酵：</p>
+        <ul>
+          <li><strong>Lactobacillus plantarum 299v</strong>：缓解肠易激综合征相关腹胀</li>
+          <li><strong>Bifidobacterium bifidum</strong>：促进温和发酵</li>
+        </ul>
       </div>
 
       <div class="activity-card">
@@ -239,7 +294,13 @@
         <h3>免疫力低下经常生病</h3>
         <p><strong>相关微生物：</strong> <span class="tag">益生菌</span> <span class="tag">短链脂肪酸</span></p>
         <p><strong>机制：</strong> 肠道菌群失调 → 免疫调节功能下降 → 易感染</p>
-        <p><strong>改善方案：</strong> 补充益生菌，摄入发酵食品，维持菌群多样性</p>
+        <p><strong>改善方案：</strong> 补充具有免疫调节功能的益生菌菌株，如：</p>
+        <ul>
+          <li><strong>Bifidobacterium lactis BB-12®</strong>：增强免疫，改善上呼吸道防御</li>
+          <li><strong>Lactobacillus rhamnosus GG (LGG)</strong>：广泛验证的免疫支持菌株</li>
+          <li><strong>Saccharomyces boulardii</strong>（益生菌酵母）：预防抗生素相关腹泻和感染</li>
+        </ul>
+        <p>维持菌群多样性同样重要。</p>
       </div>
 
       <div class="activity-card">
@@ -247,7 +308,12 @@
         <h3>情绪波动与肠道不适相关</h3>
         <p><strong>相关微生物：</strong> <span class="tag">短链脂肪酸</span> <span class="tag">益生菌</span></p>
         <p><strong>机制：</strong> 肠脑轴连接 → 肠道菌群影响神经递质 → 情绪变化</p>
-        <p><strong>改善方案：</strong> 健康饮食，减压放松，培养良好肠道环境</p>
+        <p><strong>改善方案：</strong> 健康饮食，减压放松，同时补充可能影响心理健康的"精神益生菌"：</p>
+        <ul>
+          <li><strong>Lactobacillus helveticus R0052 & Bifidobacterium longum R0175</strong>：临床研究支持其缓解焦虑和压力</li>
+          <li><strong>Lactobacillus rhamnosus GG</strong>：对情绪行为有潜在积极影响</li>
+        </ul>
+        <p>这些菌株也被称为"精神益生菌"（Psychobiotics），对肠脑健康有特殊作用。</p>
       </div>
     </section>
 
@@ -271,7 +337,7 @@
             <h3>发酵食品</h3>
             <ul>
               <li>酸奶、泡菜、味噌、纳豆、康普茶</li>
-              <li>天然含有活性益生菌</li>
+              <li>天然含有活性益生菌（如乳酸菌）</li>
               <li>有助于肠道菌群平衡</li>
             </ul>
           </div>
@@ -289,23 +355,31 @@
         <div class="principle">
           <div class="principle-icon">🥛</div>
           <div>
-            <h3>适度补充益生菌</h3>
+            <h3>适度补充益生菌（明确菌株推荐）</h3>
+            <p><strong>常见功能性益生菌菌株包括：</strong></p>
             <ul>
-              <li>选择含有活性菌的补充剂</li>
-              <li>注意菌株多样性和数量</li>
-              <li>配合益生元效果更佳</li>
+              <li><strong>Lactobacillus rhamnosus GG (LGG)</strong>：调节免疫、缓解腹泻</li>
+              <li><strong>Bifidobacterium lactis BB-12®</strong>：改善便秘与消化</li>
+              <li><strong>Saccharomyces boulardii</strong>：对抗抗生素相关腹泻</li>
+              <li><strong>Lactobacillus plantarum 299v</strong>：缓解肠易激综合征相关腹胀</li>
+            </ul>
+            <p><strong>推荐来源：</strong></p>
+            <ul>
+              <li>明确标注菌株的益生菌补充剂（查看 CFU 和菌株号）</li>
+              <li>部分标明"含活性益生菌"的酸奶（如 Yakult 含 Lactobacillus casei Shirota）</li>
+              <li>专业益生菌产品（胶囊/粉剂）</li>
             </ul>
           </div>
         </div>
       </div>
-      <p><strong>🥗 小结：</strong> 通过均衡饮食，特别是富含膳食纤维、益生元和益生菌的食物，可以培养健康的肠道微生物群落，从而提升整体健康状况。</p>
+      
 
       <table>
         <thead>
           <tr>
             <th>营养素/食物</th>
             <th>对肠道微生物的影响</th>
-            <th>推荐食物</th>
+            <th>推荐食物 / 菌株</th>
           </tr>
         </thead>
         <tbody>
@@ -320,14 +394,20 @@
             <td>洋葱、大蒜、香蕉、芦笋、燕麦</td>
           </tr>
           <tr>
-            <td>益生菌</td>
-            <td>直接补充有益菌群，调节微生态</td>
-            <td>酸奶、泡菜、味噌、益生菌补充剂</td>
+            <td>益生菌（特定菌株）</td>
+            <td>直接补充经临床验证的有益菌，调节微生态</td>
+            <td>
+              • <strong>Lactobacillus rhamnosus GG (LGG)</strong><br>
+              • <strong>Bifidobacterium lactis BB-12®</strong><br>
+              • <strong>Saccharomyces boulardii</strong><br>
+              • <strong>Lactobacillus plantarum 299v</strong><br>
+              推荐通过补充剂或特定发酵乳获取
+            </td>
           </tr>
           <tr>
             <td>短链脂肪酸</td>
             <td>为肠道细胞提供能量，抗炎保护</td>
-            <td>发酵食品、膳食纤维代谢产物</td>
+            <td>膳食纤维的益生菌代谢产物</td>
           </tr>
           <tr>
             <td>多酚类</td>
@@ -336,6 +416,363 @@
           </tr>
         </tbody>
       </table>
+	  <p><strong>🥗 小结：</strong> 通过富含膳食纤维、益生元和明确益生菌菌株的饮食，可显著优化肠道微生物群落，改善整体健康。</p>
+    </section>
+
+    <!-- 益生菌完整列表表格 -->
+    <section>
+      <h2>可食用的益生菌完整列表</h2>
+      
+      <table class="probiotic-table">
+        <thead>
+          <tr>
+            <th>益生菌名称（拉丁名）</th>
+            <th>中文名称</th>
+            <th>类型</th>
+            <th>主要功能</th>
+            <th>应用场景</th>
+          </tr>
+        </thead>
+       <tbody>
+  <!-- ========== 乳酸菌类 Lactobacillus ========== -->
+  <tr>
+    <td class="probiotic-name">Lactobacillus acidophilus</td>
+    <td class="chinese-name">嗜酸乳杆菌</td>
+    <td>乳酸菌</td>
+    <td>平衡肠道菌群、改善乳糖不耐受</td>
+    <td>
+      <span class="scenario-tag">消化健康</span>
+      <span class="scenario-tag">肠道平衡</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Lactobacillus acidophilus NCFM</td>
+    <td class="chinese-name">嗜酸乳杆菌NCFM</td>
+    <td>乳酸菌</td>
+    <td>改善肠道功能、增强免疫应答、促进消化</td>
+    <td>
+      <span class="scenario-tag">消化健康</span>
+      <span class="scenario-tag">免疫支持</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Lactobacillus casei Shirota</td>
+    <td class="chinese-name">干酪乳杆菌Shirota株（养乐多菌）</td>
+    <td>乳酸菌</td>
+    <td>维持肠道菌群平衡、增强免疫力</td>
+    <td>
+      <span class="scenario-tag">消化健康</span>
+      <span class="scenario-tag">免疫支持</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Lactobacillus delbrueckii</td>
+    <td class="chinese-name">德氏乳杆菌</td>
+    <td>乳酸菌</td>
+    <td>发酵乳制品、支持肠道健康</td>
+    <td>
+      <span class="scenario-tag">发酵食品</span>
+      <span class="scenario-tag">消化健康</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Lactobacillus fermentum</td>
+    <td class="chinese-name">发酵乳杆菌</td>
+    <td>乳酸菌</td>
+    <td>抗氧化、阴道和肠道健康</td>
+    <td>
+      <span class="scenario-tag">女性健康</span>
+      <span class="scenario-tag">抗氧化</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Lactobacillus gasseri</td>
+    <td class="chinese-name">加氏乳杆菌</td>
+    <td>乳酸菌</td>
+    <td>代谢调节、体重管理、抗炎</td>
+    <td>
+      <span class="scenario-tag">代谢调节</span>
+      <span class="scenario-tag">体重管理</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Lactobacillus helveticus R0052</td>
+    <td class="chinese-name">瑞士乳杆菌R0052</td>
+    <td>乳酸菌</td>
+    <td>缓解压力、改善睡眠质量、支持心理健康</td>
+    <td>
+      <span class="scenario-tag">心理健康</span>
+      <span class="scenario-tag">压力管理</span>
+      <span class="scenario-tag">睡眠支持</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Lactobacillus johnsonii</td>
+    <td class="chinese-name">约氏乳杆菌</td>
+    <td>乳酸菌</td>
+    <td>免疫调节、呼吸道健康</td>
+    <td>
+      <span class="scenario-tag">免疫支持</span>
+      <span class="scenario-tag">呼吸道健康</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Lactobacillus paracasei</td>
+    <td class="chinese-name">副干酪乳杆菌</td>
+    <td>乳酸菌</td>
+    <td>调节肠道菌群、支持免疫系统</td>
+    <td>
+      <span class="scenario-tag">消化健康</span>
+      <span class="scenario-tag">免疫支持</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Lactobacillus plantarum 299v</td>
+    <td class="chinese-name">植物乳杆菌299v</td>
+    <td>乳酸菌</td>
+    <td>缓解肠易激综合征、减轻腹胀</td>
+    <td>
+      <span class="scenario-tag">消化健康</span>
+      <span class="scenario-tag">腹胀不适</span>
+      <span class="scenario-tag">肠易激综合征</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Lactobacillus reuteri</td>
+    <td class="chinese-name">罗伊氏乳杆菌</td>
+    <td>乳酸菌</td>
+    <td>抗炎、口腔和肠道健康</td>
+    <td>
+      <span class="scenario-tag">口腔健康</span>
+      <span class="scenario-tag">消化健康</span>
+      <span class="scenario-tag">女性健康</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Lactobacillus reuteri DSM 17938</td>
+    <td class="chinese-name">罗伊氏乳杆菌DSM 17938</td>
+    <td>乳酸菌</td>
+    <td>婴儿肠绞痛、口腔健康</td>
+    <td>
+      <span class="scenario-tag">儿童健康</span>
+      <span class="scenario-tag">口腔健康</span>
+      <span class="scenario-tag">消化舒适</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Lactobacillus rhamnosus GG (LGG)</td>
+    <td class="chinese-name">鼠李糖乳杆菌GG株</td>
+    <td>乳酸菌</td>
+    <td>调节免疫、缓解腹泻、增强肠道屏障</td>
+    <td>
+      <span class="scenario-tag">消化健康</span>
+      <span class="scenario-tag">免疫支持</span>
+      <span class="scenario-tag">旅行者腹泻预防</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Lactobacillus rhamnosus GR-1</td>
+    <td class="chinese-name">鼠李糖乳杆菌GR-1</td>
+    <td>乳酸菌</td>
+    <td>女性泌尿生殖健康</td>
+    <td>
+      <span class="scenario-tag">女性健康</span>
+      <span class="scenario-tag">泌尿健康</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Lactobacillus rhamnosus HN001</td>
+    <td class="chinese-name">鼠李糖乳杆菌HN001</td>
+    <td>乳酸菌</td>
+    <td>增强免疫、降低过敏风险</td>
+    <td>
+      <span class="scenario-tag">免疫支持</span>
+      <span class="scenario-tag">过敏管理</span>
+      <span class="scenario-tag">儿童健康</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Lactobacillus salivarius</td>
+    <td class="chinese-name">唾液乳杆菌</td>
+    <td>乳酸菌</td>
+    <td>口腔和肠道健康、抗炎作用</td>
+    <td>
+      <span class="scenario-tag">口腔健康</span>
+      <span class="scenario-tag">消化健康</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Lactobacillus bulgaricus</td>
+    <td class="chinese-name">保加利亚乳杆菌</td>
+    <td>乳酸菌</td>
+    <td>酸奶发酵、促进消化</td>
+    <td>
+      <span class="scenario-tag">发酵食品</span>
+      <span class="scenario-tag">消化健康</span>
+    </td>
+  </tr>
+
+  <!-- ========== 双歧杆菌类 Bifidobacterium ========== -->
+  <tr>
+    <td class="probiotic-name">Bifidobacterium animalis subsp. lactis Bb-12</td>
+    <td class="chinese-name">动物双歧杆菌乳亚种Bb-12</td>
+    <td>双歧杆菌</td>
+    <td>消化健康、免疫支持（即常见的 Bb-12 菌株）</td>
+    <td>
+      <span class="scenario-tag">消化健康</span>
+      <span class="scenario-tag">免疫支持</span>
+      <span class="scenario-tag">儿童健康</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Bifidobacterium bifidum</td>
+    <td class="chinese-name">两岐双岐杆菌</td>
+    <td>双歧杆菌</td>
+    <td>改善便秘、增强肠道屏障功能</td>
+    <td>
+      <span class="scenario-tag">消化健康</span>
+      <span class="scenario-tag">便秘改善</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Bifidobacterium bifidum R0071</td>
+    <td class="chinese-name">两歧双歧杆菌R0071</td>
+    <td>双歧杆菌</td>
+    <td>支持消化健康、改善肠道菌群平衡</td>
+    <td>
+      <span class="scenario-tag">消化健康</span>
+      <span class="scenario-tag">肠道平衡</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Bifidobacterium breve</td>
+    <td class="chinese-name">短双岐杆菌</td>
+    <td>双歧杆菌</td>
+    <td>改善肠道环境、支持婴儿健康</td>
+    <td>
+      <span class="scenario-tag">儿童健康</span>
+      <span class="scenario-tag">肠道平衡</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Bifidobacterium breve M-16V</td>
+    <td class="chinese-name">短双岐杆菌M-16V</td>
+    <td>双歧杆菌</td>
+    <td>婴儿健康、过敏预防</td>
+    <td>
+      <span class="scenario-tag">儿童健康</span>
+      <span class="scenario-tag">过敏管理</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Bifidobacterium infantis</td>
+    <td class="chinese-name">婴儿双岐杆菌</td>
+    <td>双歧杆菌</td>
+    <td>改善肠道舒适度、支持婴儿肠道发育</td>
+    <td>
+      <span class="scenario-tag">儿童健康</span>
+      <span class="scenario-tag">肠道舒适</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Bifidobacterium infantis R0033</td>
+    <td class="chinese-name">婴儿双歧杆菌R0033</td>
+    <td>双歧杆菌</td>
+    <td>改善肠道舒适性、调节肠道功能</td>
+    <td>
+      <span class="scenario-tag">儿童健康</span>
+      <span class="scenario-tag">肠道舒适</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Bifidobacterium longum</td>
+    <td class="chinese-name">长双岐杆菌</td>
+    <td>双歧杆菌</td>
+    <td>心理健康支持、抗炎、免疫调节</td>
+    <td>
+      <span class="scenario-tag">心理健康</span>
+      <span class="scenario-tag">免疫支持</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Bifidobacterium longum R0175</td>
+    <td class="chinese-name">长双岐杆菌R0175</td>
+    <td>双歧杆菌</td>
+    <td>心理健康支持、抗焦虑</td>
+    <td>
+      <span class="scenario-tag">心理健康</span>
+      <span class="scenario-tag">压力管理</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Bifidobacterium lactis BB-12®</td>
+    <td class="chinese-name">乳双歧杆菌BB-12®</td>
+    <td>双歧杆菌</td>
+    <td>改善便秘、促进消化、增强免疫力</td>
+    <td>
+      <span class="scenario-tag">消化健康</span>
+      <span class="scenario-tag">免疫支持</span>
+      <span class="scenario-tag">儿童健康</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Bifidobacterium lactis Bi-07</td>
+    <td class="chinese-name">乳双歧杆菌Bi-07</td>
+    <td>双歧杆菌</td>
+    <td>支持消化功能、增强免疫力</td>
+    <td>
+      <span class="scenario-tag">消化健康</span>
+      <span class="scenario-tag">免疫支持</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Bifidobacterium lactis HN019</td>
+    <td class="chinese-name">乳双歧杆菌HN019</td>
+    <td>双歧杆菌</td>
+    <td>改善肠道蠕动、增强免疫反应</td>
+    <td>
+      <span class="scenario-tag">消化健康</span>
+      <span class="scenario-tag">免疫支持</span>
+    </td>
+  </tr>
+
+  <!-- ========== 其他菌属（如链球菌、酵母） ========== -->
+  <tr>
+    <td class="probiotic-name">Streptococcus thermophilus</td>
+    <td class="chinese-name">嗜热链球菌</td>
+    <td>链球菌</td>
+    <td>酸奶发酵、辅助消化</td>
+    <td>
+      <span class="scenario-tag">发酵食品</span>
+      <span class="scenario-tag">消化辅助</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="probiotic-name">Saccharomyces boulardii</td>
+    <td class="chinese-name">鲍氏酵母菌（益生菌酵母）</td>
+    <td>益生菌酵母</td>
+    <td>预防抗生素相关腹泻、肠道感染</td>
+    <td>
+      <span class="scenario-tag">消化健康</span>
+      <span class="scenario-tag">抗生素支持</span>
+      <span class="scenario-tag">感染预防</span>
+    </td>
+  </tr>
+</tbody>
+      </table>
+
+      <h3>益生菌的应用场景总结</h3>
+      <ul>
+        <li><strong>消化健康：</strong> LGG, BB-12, 乳酸菌混合物, 植物乳杆菌299v, 干酪乳杆菌Shirota</li>
+        <li><strong>免疫支持：</strong> BB-12, LGG, 嗜酸乳杆菌, 瑞士乳杆菌R0052, 长双岐杆菌R0175</li>
+        <li><strong>女性健康：</strong> 发酵乳杆菌, 罗伊氏乳杆菌DSM 17938, 鼠李糖乳杆菌GR-1</li>
+        <li><strong>儿童健康：</strong> BB-12, LGG, 动物双岐杆菌乳亚种BB-12, 短双岐杆菌M-16V</li>
+        <li><strong>过敏管理：</strong> LGG, BB-12, 短双岐杆菌M-16V</li>
+        <li><strong>心理健康：</strong> 长双岐杆菌 R0175, 瑞士乳杆菌 R0052</li>
+        <li><strong>旅行者腹泻预防：</strong> 鼠李糖乳杆菌 GG</li>
+        <li><strong>口腔健康：</strong> 罗伊氏乳杆菌DSM 17938, 罗伊氏乳杆菌</li>
+        <li><strong>代谢调节：</strong> 加氏乳杆菌</li>
+      </ul>
     </section>
 
     <section>
@@ -348,7 +785,6 @@
         <li>NIH National Institute of Diabetes：《The human microbiome and digestive health》</li>
       </ul>
     </section>
-
   </div>
 </body>
 </html>
