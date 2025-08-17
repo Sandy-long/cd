@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>健康肠道微生物与身心健康</title>
+  <style>
+    :root {
+      --main-text: #333333;
+      --bg-color: #FFFFFF;
+      --section-bg: #FAFAFA;
+      --border-light: #F0F0F0;
+      --card-bg: #FFFFFF;
+
+      /* 益生菌友好色彩 - 肠道微生物卡片边框色 */
+      --microbe-fiber: #90EE90;     /* 淡绿 - 膳食纤维 */
+      --microbe-probiotic: #87CEEB; /* 淡蓝 - 益生菌 */
+      --microbe-prebiotic: #DDA0DD; /* 淡紫 - 益生元 */
+      --microbe-shortchain: #F0E68C; /* 淡黄 - 短链脂肪酸 */
+
+      /* 温和主色（用于标题等） */
+      --primary-text-accent: #444444;
+      --heading-color: #555555;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--main-text);
+      background: var(--bg-color);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(to right, #F8F9FA, #E8F4F8);
+      color: var(--heading-color);
+      padding: 3rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: var(--bg-color);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--heading-color);
+    }
+
+    h2 {
+      color: var(--heading-color);
+      border-left: 4px solid #AAAAAA;
+      padding-left: 1rem;
+      margin: 2.5rem 0 1.5rem;
+    }
+
+    h3 {
+      color: var(--heading-color);
+      margin: 2rem 0 1rem;
+    }
+
+    .microbe-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-top: 4px solid;
+    }
+
+    .fiber { border-color: var(--microbe-fiber); }
+    .probiotic { border-color: var(--microbe-probiotic); }
+    .prebiotic { border-color: var(--microbe-prebiotic); }
+    .shortchain { border-color: var(--microbe-shortchain); }
+
+    .activity-card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      transition: transform 0.3s ease;
+    }
+
+    .activity-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .activity-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--heading-color);
+    }
+
+    .gut-health-principles {
+      background: var(--section-bg);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+
+    .principle {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+
+    .principle-icon {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+      color: var(--heading-color);
+      flex-shrink: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background: var(--card-bg);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    th {
+      background: var(--section-bg);
+      color: var(--heading-color);
+    }
+
+    tr:hover {
+      background: #F9F9F9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      color: #888888;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--section-bg);
+      color: var(--heading-color);
+      padding: 0.3em 0.8em;
+      border-radius: 1em;
+      font-size: 0.9em;
+      margin-right: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .highlight {
+      background: #FFF9C4;
+      padding: 0.2em 0.4em;
+      border-radius: 0.3em;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>健康肠道微生物与身心健康</h1>
+    <p>探索肠道菌群如何影响你的情绪、免疫力和整体健康</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>什么是肠道微生物群落？</h2>
+      <p>肠道微生物群落（Gut Microbiota）是指居住在我们肠道内的数以万亿计的微生物，包括细菌、病毒、真菌和原生生物。这些微生物与我们的健康息息相关，特别是在消化、免疫和神经功能方面发挥着重要作用。</p>
+      <p><strong>关键成员：</strong> 益生菌（有益菌）、益生元（益生菌食物）、短链脂肪酸（益生菌代谢产物）</p>
+    </section>
+
+    <section>
+      <h2>四大关键肠道微生物如何影响你的健康？</h2>
+
+      <div class="microbe-card fiber">
+        <h3>🌱 膳食纤维 (Dietary Fiber)</h3>
+        <p><strong>"益生菌的美食"</strong> - 为有益菌提供营养基质</p>
+        <p><span class="highlight">与健康关系：</span> 膳食纤维滋养益生菌，促进肠道菌群平衡，改善消化功能</p>
+        <p><span class="highlight">健康益处：</span> 预防便秘、降低胆固醇、稳定血糖</p>
+      </div>
+
+      <div class="microbe-card probiotic">
+        <h3>🦠 益生菌 (Probiotics)</h3>
+        <p><strong>"肠道卫士"</strong> - 维护肠道微生态平衡</p>
+        <p><span class="highlight">与健康关系：</span> 乳酸菌、双歧杆菌等益生菌抑制有害菌，增强肠道屏障</p>
+        <p><span class="highlight">健康益处：</span> 改善免疫力、缓解腹泻便秘、支持心理健康</p>
+      </div>
+
+      <div class="microbe-card prebiotic">
+        <h3>🍄 益生元 (Prebiotics)</h3>
+        <p><strong>"益生菌的肥料"</strong> - 选择性滋养有益菌群</p>
+        <p><span class="highlight">与健康关系：</span> 低聚糖、抗性淀粉等益生元促进益生菌生长繁殖</p>
+        <p><span class="highlight">健康益处：</span> 增强肠道功能、改善营养吸收、提升免疫力</p>
+      </div>
+
+      <div class="microbe-card shortchain">
+        <h3>💨 短链脂肪酸 (Short-Chain Fatty Acids)</h3>
+        <p><strong>"肠道能量源"</strong> - 益生菌代谢产生的重要物质</p>
+        <p><span class="highlight">与健康关系：</span> 丁酸、丙酸、乙酸等SCFAs为结肠细胞提供能量，调节免疫</p>
+        <p><span class="highlight">健康益处：</span> 抗炎作用、调节食欲、保护肠道黏膜</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>常见肠道健康问题 & 微生物机制</h2>
+      <div class="activity-card">
+        <div class="activity-icon">😫</div>
+        <h3>经常便秘或腹泻</h3>
+        <p><strong>相关微生物：</strong> <span class="tag">益生菌</span> <span class="tag">膳食纤维</span></p>
+        <p><strong>机制：</strong> 肠道菌群失衡 → 消化功能紊乱 → 排便异常</p>
+        <p><strong>改善方案：</strong> 增加膳食纤维摄入，补充益生菌，保持规律作息</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">😤</div>
+        <h3>经常感到腹胀不适</h3>
+        <p><strong>相关微生物：</strong> <span class="tag">益生元</span> <span class="tag">短链脂肪酸</span></p>
+        <p><strong>机制：</strong> 发酵过程异常 → 气体产生过多 → 腹胀感</p>
+        <p><strong>改善方案：</strong> 逐步增加益生元食物，促进有益菌发酵平衡</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">😴</div>
+        <h3>免疫力低下经常生病</h3>
+        <p><strong>相关微生物：</strong> <span class="tag">益生菌</span> <span class="tag">短链脂肪酸</span></p>
+        <p><strong>机制：</strong> 肠道菌群失调 → 免疫调节功能下降 → 易感染</p>
+        <p><strong>改善方案：</strong> 补充益生菌，摄入发酵食品，维持菌群多样性</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">😟</div>
+        <h3>情绪波动与肠道不适相关</h3>
+        <p><strong>相关微生物：</strong> <span class="tag">短链脂肪酸</span> <span class="tag">益生菌</span></p>
+        <p><strong>机制：</strong> 肠脑轴连接 → 肠道菌群影响神经递质 → 情绪变化</p>
+        <p><strong>改善方案：</strong> 健康饮食，减压放松，培养良好肠道环境</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>肠道健康饮食原则</h2>
+      <div class="gut-health-principles">
+        <div class="principle">
+          <div class="principle-icon">🥦</div>
+          <div>
+            <h3>高纤维饮食</h3>
+            <ul>
+              <li>多吃全谷物、豆类、蔬菜和水果</li>
+              <li>每日摄入25-30克膳食纤维</li>
+              <li>选择多样化的植物性食物</li>
+            </ul>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-icon">🥬</div>
+          <div>
+            <h3>发酵食品</h3>
+            <ul>
+              <li>酸奶、泡菜、味噌、纳豆、康普茶</li>
+              <li>天然含有活性益生菌</li>
+              <li>有助于肠道菌群平衡</li>
+            </ul>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-icon">🍌</div>
+          <div>
+            <h3>益生元食物</h3>
+            <ul>
+              <li>洋葱、大蒜、香蕉、芦笋、燕麦</li>
+              <li>为益生菌提供营养，促进其生长</li>
+            </ul>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-icon">🥛</div>
+          <div>
+            <h3>适度补充益生菌</h3>
+            <ul>
+              <li>选择含有活性菌的补充剂</li>
+              <li>注意菌株多样性和数量</li>
+              <li>配合益生元效果更佳</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p><strong>🥗 小结：</strong> 通过均衡饮食，特别是富含膳食纤维、益生元和益生菌的食物，可以培养健康的肠道微生物群落，从而提升整体健康状况。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>营养素/食物</th>
+            <th>对肠道微生物的影响</th>
+            <th>推荐食物</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>膳食纤维</td>
+            <td>促进益生菌生长，改善肠道蠕动</td>
+            <td>全谷物、豆类、蔬菜、水果</td>
+          </tr>
+          <tr>
+            <td>益生元</td>
+            <td>选择性滋养有益菌，促进发酵</td>
+            <td>洋葱、大蒜、香蕉、芦笋、燕麦</td>
+          </tr>
+          <tr>
+            <td>益生菌</td>
+            <td>直接补充有益菌群，调节微生态</td>
+            <td>酸奶、泡菜、味噌、益生菌补充剂</td>
+          </tr>
+          <tr>
+            <td>短链脂肪酸</td>
+            <td>为肠道细胞提供能量，抗炎保护</td>
+            <td>发酵食品、膳食纤维代谢产物</td>
+          </tr>
+          <tr>
+            <td>多酚类</td>
+            <td>抗氧化，支持益生菌生长</td>
+            <td>绿茶、浆果、咖啡、黑巧克力</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>科学参考</h2>
+      <ul>
+        <li>Nature Reviews Microbiology：《The gut microbiota in health and disease》</li>
+        <li>Cell Host & Microbe：《Gut microbiota-brain axis》</li>
+        <li>Science：《Diet-microbiota interactions》</li>
+        <li>Gut Journal：《Role of probiotics in human health》</li>
+        <li>NIH National Institute of Diabetes：《The human microbiome and digestive health》</li>
+      </ul>
+    </section>
+
+  </div>
+</body>
+</html>
